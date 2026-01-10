@@ -16,12 +16,11 @@ export const metadata = {
 };
 
 export default async function About() {
-  await connectToDB();
+  // await connectToDB();
   // await facultyModel.create({
-  //   name: "Shivam Singh",
-  //   email: "shivam@gmail.com",
-  //   image: "#",
-  //   password: "shivam",
+  //   name: "Arman Ali",
+  //   email: "director@gmail.com",
+  //   password: "arman",
   //   designation: "Director",
   //   department :"694a83ceec4cd99b3fe61480",
   // });
