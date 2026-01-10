@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-import FacultySidebar from "@/Components/faculty/FacultySidebar";
-import DashboardHome from "@/Components/faculty/DashboardHome";
-import FacultyProfile from "@/Components/faculty/FacultyProfile";
-import UploadCircular from "@/Components/faculty/UploadCircular";
-import StudentAdmissions from "@/Components/faculty/StudentAdmission";
+import FacultySidebar from "@/Components/Faculty/FacultySidebar";
+import DashboardHome from "@/Components/Faculty/DashboardHome";
+import FacultyProfile from "@/Components/Faculty/FacultyProfile";
+import UploadCircular from "@/Components/Faculty/UploadCircular";
+import StudentAdmissions from "@/Components/Faculty/StudentAdmission";
 import ManageFaculties from "./ManageFaculties";
 import ManageDepartments from "./ManageDepartments";
 import Loader from "../Loader";
