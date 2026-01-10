@@ -30,7 +30,7 @@ export default function LoginPage() {
       const data = await res.json();
       if (data.success) {
         toast.success(data.message);
-        window.location.href=`http://localhost:3000/${role}/dashboard`;
+        window.location.href=`https://rrsimt-website.vercel.app/${role}/dashboard`;
       } else {
         toast.error(data.message);
       }
