@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RRSIMT | Home</title>
+
+  <!-- INLINE CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background: #8b0000;
+      color: #fff;
+      font-size: 14px;
+      padding: 6px 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Header */
+    .header {
+      background: #fff;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 3px solid #8b0000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 55px;
+    }
+
+    .logo h1 {
+      margin: 0;
+      font-size: 18px;
+      color: #8b0000;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #8b0000;
+    }
+
+    .navbar ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar ul li {
+      padding: 12px 18px;
+    }
+
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .navbar ul li:hover {
+      background: #a40000;
+    }
+
+    /* Slider */
+    .slider {
+      position: relative;
+      height: 350px;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      display: none;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slide-text {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      padding: 15px;
+      max-width: 600px;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 15px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+    }
+
+    /* Notices */
+    .notice-box {
+      background: #fff;
+      border: 1px solid #ddd;
+    }
+
+    .notice-box h2 {
+      margin: 0;
+      background: #8b0000;
+      color: #fff;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .notice-box ul {
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    .notice-box ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Sections */
+    .section {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #8b0000;
+      font-size: 18px;
+      border-bottom: 2px solid #8b0000;
+      padding-bottom: 5px;
+    }
+
+    /* Courses */
+    .courses {
+      display: flex;
+      gap: 15px;
+    }
+
+    .course {
+      flex: 1;
+      border: 1px solid #ccc;
+      padding: 15px;
+      text-align: center;
+      background: #fafafa;
+    }
+
+    /* Placement */
+    .placements {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .placements div {
+      background: #f1f1f1;
+      padding: 15px;
+      border: 1px solid #ccc;
+    }
+
+    /* Footer */
+    .footer {
+      background: #8b0000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div>Approved by AICTE | Affiliated to AKTU Lucknow</div>
+    <div>Email: info@rrsimt.ac.in | Phone: +91-XXXXXXXXXX</div>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <img src="https://via.placeholder.com/60" alt="Logo">
+      <h1>Rajarshi Rananjay Singh Institute of Management & Technology</h1>
+    </div>
+    <div><strong>College Code: 383</strong></div>
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Department</a></li>
+      <li><a href="#">Admission</a></li>
+      <li><a href="#">Placement</a></li>
+      <li><a href="#">Activities</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Slider -->
+  <div class="slider">
+    <div class="slide active" style="background-image:url('https://via.placeholder.com/1400x350');">
+      <div class="slide-text">
+        <h2>Welcome to RRSIMT</h2>
+        <p>Looking forward, Looking onward, Looking upward</p>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image:url('https://via.placeholder.com/1400x350/cccccc');">
+      <div class="slide-text">
+        <h2>Admissions Open 2025-26</h2>
+        <p>B.Tech | MBA | Remember Your Future Starts Here</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Notices -->
+    <div class="notice-box">
+      <h2>Important Notices</h2>
+      <ul>
+        <li>📢 AKTU Exam Form Last Date Extended</li>
+        <li>📢 B.Tech Admission Open 2025-26</li>
+        <li>📢 Practical Exams Schedule Update</li>
+      </ul>
+    </div>
+
+    <!-- Right Content -->
+    <div>
+
+      <div class="section">
+        <h2>Courses Offered</h2>
+        <div class="courses">
+          <div class="course">B.Tech</div>
+          <div class="course">MBA</div>
+          <div class="course">Diploma</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Placement Highlights</h2>
+        <div class="placements">
+          <div>100+ Recruiters</div>
+          <div>500+ Students Placed</div>
+          <div>10 LPA Highest</div>
+          <div>Skill Training</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Quick Links</h2>
+        <ul>
+          <li>AICTE Approval</li>
+          <li>AKTU Circulars</li>
+          <li>Online Admission</li>
+          <li>Student Login</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 RRSIMT Amethi | All Rights Reserved
+  </div>
+
+  <!-- INLINE JS -->
+  <script>
+    let slides = document.querySelectorAll(".slide");
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 3000);
+  </script>
+
+</body>
+</html>
