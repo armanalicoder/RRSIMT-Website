@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import Circulars from "@/Components/Circulars/Circular";
 import connectToDB from "@/lib/dbConnect";
 import circularModel from "@/models/circularModel";

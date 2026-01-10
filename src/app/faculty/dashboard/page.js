@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import FacultyHomepage from "@/Components/Faculty/FacultyHomepage";
 import connectToDB from "@/lib/dbConnect";
 import admissionModel from "@/models/admissionModel";
