@@ -23,6 +23,7 @@ const underline =
 export default function NavbarMenu() {
   const router = useRouter();
   const [open, setOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(false);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
 
@@ -133,20 +134,26 @@ export default function NavbarMenu() {
           ))}
           {user && (
             <div className="my-1">
-            <Link href={`${user?.role}/dashboard`} className={`${underline} text-white`}>
-              Dashboard
-            </Link>
+              <Link
+                href={`${user?.role}/dashboard`}
+                className={`${underline} text-white`}
+              >
+                Dashboard
+              </Link>
             </div>
           )}
           {/* Login Dropdown */}
           {!user ? (
             <div className="z-20 relative group">
               <span
+                onClick={() => {
+                  setOpenDropdown(!openDropdown);
+                }}
                 className={`${underline} cursor-pointer text-white bg-black px-2 py-1 rounded-md`}
               >
                 Login <CiLogin className="inline mb-1" />
               </span>
-              <div className="absolute top-3 -left-30 mt-3 w-44 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+              <div className="absolute z-50 -top-15 left-20 mt-3 w-44 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
                 <Link
                   href="/login/director"
                   className="block px-4 py-2 hover:bg-gray-100"
@@ -160,6 +167,22 @@ export default function NavbarMenu() {
                   Faculty Login
                 </Link>
               </div>
+              {openDropdown && (
+                <div className="absolute z-50 -top-15 left-20 mt-3 w-44 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+                  <Link
+                    href="/login/director"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Director Login
+                  </Link>
+                  <Link
+                    href="/login/faculty"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Faculty Login
+                  </Link>
+                </div>
+              )}
             </div>
           ) : (
             <button

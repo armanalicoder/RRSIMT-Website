@@ -22,7 +22,7 @@ export default function Navbar() {
               <MdOutlineEmail className="inline" /> admission@rrsimt.ac.in
             </span>
             <span>
-              &nbsp; <IoIosCall className="inline" /> +91 7080102007
+              &nbsp;<IoIosCall className="inline" /> +91 7080102007
             </span>
           </div>
         </div>

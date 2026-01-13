@@ -24,7 +24,7 @@ export default function QuickLink() {
     },
     {
       name: "Dr. Sanjay Sinh",
-      desc: "Chairaman",
+      desc: "Our Chairman",
       img: "/chairman.jpg",
     },
     {
@@ -59,11 +59,11 @@ export default function QuickLink() {
       img: "/aktucircular.png",
       link: "https://erp.aktu.ac.in/Webpages/Public/Circular/frmCircularForWebsite.aspx",
     },
-    {
-      title: "Fees Pay",
-      img: "/fees_pay.png",
-      link: "#",
-    },
+    // {
+    //   title: "Fees Pay",
+    //   img: "/fees_pay.png",
+    //   link: "#",
+    // },
   ];
   return (
     <section>
@@ -72,7 +72,7 @@ export default function QuickLink() {
       </h1>
       <div className="md:flex justify-around">
         <div className="grid grid-cols-3 p-2 md:h-20 text-center mx-auto gap-3">
-          {links.map((item,index) => {
+          {links.map((item, index) => {
             return (
               <div key={index} className="shadow p-2 hover:shadow-black">
                 <Link target="_blank" href={item.link}>
@@ -89,25 +89,30 @@ export default function QuickLink() {
             );
           })}
         </div>
-        <div className="md:flex flex-wrap justify-center gap-3 md:w-[50%]">
+        <div className="md:flex flex-wrap justify-center gap-3 md:w-[50%] mx-auto">
           {leaders.map((leader, index) => {
             return (
               <div
                 key={index}
-                className="flex justify-center text-center shadow p-2 my-3 gap-2"
+                className="flex items-center gap-4 shadow-md p-3 my-2 bg-white rounded-md"
               >
-                <div>
+                {/* Image */}
+                <div className="flex-shrink-0">
                   <Image
                     src={leader.img}
                     className="rounded-full"
-                    width={50}
-                    height={50}
+                    width={60}
+                    height={60}
                     alt="rrsimt_leader_image"
                   />
                 </div>
-                <div>
-                  <h2 className="text-red-800 font-semibold">{leader.name}</h2>
-                  <p className="text-sm">{leader.desc} </p>
+
+                {/* Text */}
+                <div className="text-left">
+                  <h2 className="text-red-700 font-semibold text-lg leading-tight">
+                    {leader.name}
+                  </h2>
+                  <p className="text-sm text-gray-700">{leader.desc}</p>
                 </div>
               </div>
             );
