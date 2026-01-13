@@ -78,8 +78,12 @@ export default function Footer() {
 
       {/* Bottom Footer */}
       <div className="bg-red-950 text-center py-3 text-sm">
-        © Rajarshi Rananjay Sinh Institute of Management & Technology,Amethi (U.P)
+        © Rajarshi Rananjay Sinh Institute of Management & Technology,Amethi (U.P)<br/>
+        Website Designed & Developed by Arman Ali
       </div>
+{/* <div className="bg-red-950 text-center py-3 text-sm">
+        © Design & Devloped By Arman Ali
+      </div> */}
 
     </footer>
   );
