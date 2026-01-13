@@ -153,20 +153,7 @@ export default function NavbarMenu() {
               >
                 Login <CiLogin className="inline mb-1" />
               </span>
-              <div className="absolute z-50 -top-15 left-20 mt-3 w-44 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
-                <Link
-                  href="/login/director"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Director Login
-                </Link>
-                <Link
-                  href="/login/faculty"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Faculty Login
-                </Link>
-              </div>
+             
               {openDropdown && (
                 <div className="absolute z-50 -top-15 left-20 mt-3 w-44 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
                   <Link
