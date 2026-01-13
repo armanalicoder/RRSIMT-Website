@@ -155,7 +155,7 @@ export default function NavbarMenu() {
               </span>
              
               {openDropdown && (
-                <div className="absolute z-50 -top-15 left-20 mt-3 w-44 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+                <div className="absolute z-50 -top-15 left-20 mt-3 w-44 bg-white text-black rounded-md shadow-lg transition">
                   <Link
                     href="/login/director"
                     className="block px-4 py-2 hover:bg-gray-100"
