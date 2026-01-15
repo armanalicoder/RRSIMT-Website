@@ -13,8 +13,8 @@ export async function POST(request) {
     const { data } = await request.json();
     const user_email = data.email;
 
-    const isExist = await admissionModel.find({ email: user_email });
-    if (isExist.length == 0) {
+    const isExist = await admissionModel.findOne({ email: user_email });
+    if (!isExist) {
       return NextResponse.json({
         success: false,
         message: "Enquiry Already Submitted. Please Wait..",
