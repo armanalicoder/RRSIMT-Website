@@ -14,7 +14,8 @@ export async function POST(request) {
     const user_email = data.email;
 
     const isExist = await admissionModel.findOne({ email: user_email });
-    if (!isExist) {
+    // console.log(isExist)
+    if (isExist!=null || isExist!=undefined) {
       return NextResponse.json({
         success: false,
         message: "Enquiry Already Submitted. Please Wait..",
@@ -30,6 +31,7 @@ export async function POST(request) {
         "Enquiry Submitted Successfully We will reach you within 24 hrs.",
     });
   } catch (err) {
+    // console.log(err)
     return NextResponse.json({
       success: false,
       message: "Somthing Went Wrong!",

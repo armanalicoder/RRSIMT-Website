@@ -63,18 +63,20 @@ export default function Departments({ departments }) {
       {open === "mba" && (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {departments.map((department, i) => {
-            return (department.course === "MBA" && (
-              <Link key={i} href={`/departments/${department.slug}`}>
-                <div className="border rounded-lg p-5 bg-white hover:shadow-lg transition">
-                  <h3 className="text-lg font-semibold text-red-800 mb-2">
-                    {department.name}
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    {department.description}
-                  </p>
-                </div>
-              </Link>
-            ));
+            return (
+              department.course === "MBA" && (
+                <Link key={i} href={`/departments/${department.slug}`}>
+                  <div className="border rounded-lg p-5 bg-white hover:shadow-lg transition">
+                    <h3 className="text-lg font-semibold text-red-800 mb-2">
+                      {department.name}
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      Department of {department.name}
+                    </p>
+                  </div>
+                </Link>
+              )
+            );
           })}
         </div>
       )}
